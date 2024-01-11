@@ -19,16 +19,22 @@ const vowels = "aeiouAEIOU";
 
 let hasThreeVowels = function (string) {
   let acc = 0;
+  let usedVowels = [];
   string.split("").forEach((curVal) => {
-    if (vowels.includes(curVal)) {
+    if (vowels.includes(curVal) && !usedVowels.includes(curVal)) {
       acc++;
+      usedVowels.push(curVal.toLowerCase(), curVal.toUpperCase());
     }
   });
 
   return acc >= 3;
 };
 
-// Your code here
+console.log(hasThreeVowels("delicious")); //  true
+console.log(hasThreeVowels("bootcamp prep")); //  true
+console.log(hasThreeVowels("bootcamp")); //  false
+console.log(hasThreeVowels("dog")); //  false
+console.log(hasThreeVowels("go home")); //  false
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

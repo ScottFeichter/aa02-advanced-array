@@ -11,16 +11,21 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 */
 
 let unique = function (array) {
-  let nuArr = JSON.parse(JSON.stringify(array));
+  let nuDeepArr = JSON.parse(JSON.stringify(array));
+  let nuArr = [];
   array.filter((curVal) => {
-    if (nuArr.has(curVal)) {
-      // do nothing
+    if (nuArr.includes(curVal)) {
+      console.log("nothing");
     } else {
       nuArr.push(curVal);
     }
   });
   return nuArr;
 };
+
+console.log(unique([1, 1, 2, 3, 3])); // [1, 2, 3]
+console.log(unique([11, 7, 8, 10, 8, 7, 7])); // [11, 7, 8, 10]
+console.log(unique(["a", "b", "c", "b"])); // ['a', 'b', 'c']
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

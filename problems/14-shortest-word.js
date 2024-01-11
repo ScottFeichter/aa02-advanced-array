@@ -16,16 +16,19 @@ console.log(shortestWord('do what you enjoy'));         // 'do'
 
 let shortestWord = function (sentence) {
   let words = sentence.split(" ");
-  let longest = "";
+  // console.log(words);
+  let shortest = words[0];
   words.filter((curVal) => {
-    if (curVal.length > longest.length) {
-      longest = curVal;
+    if (shortest.length >= curVal.length) {
+      shortest = curVal;
     }
   });
-  return longest;
+  return shortest;
 };
 
 console.log(shortestWord("what a wonderful life")); // 'a'
+console.log(shortestWord("the quick brown fox jumps")); // 'fox'
+console.log(shortestWord("do what you enjoy")); // 'do'
 
 // Your code here
 
