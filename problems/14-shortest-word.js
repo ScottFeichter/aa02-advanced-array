@@ -14,11 +14,20 @@ console.log(shortestWord('do what you enjoy'));         // 'do'
 
 */
 
-let shortestWord = function(sentence) {
-  // Your code here 
+let shortestWord = function (sentence) {
+  let words = sentence.split(" ");
+  let longest = "";
+  words.filter((curVal) => {
+    if (curVal.length > longest.length) {
+      longest = curVal;
+    }
+  });
+  return longest;
 };
 
-// Your code here 
+console.log(shortestWord("what a wonderful life")); // 'a'
+
+// Your code here
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
