@@ -23,14 +23,27 @@ let arr2 = [
 console.log(twoDimensionalProduct(arr2)); // 88
 */
 
-let twoDimensionalProduct = function(arr) {
-    // Your code here 
+let arr1 = [[6, 4], [5], [3, 1]];
+
+let twoDimensionalProduct = function (arr) {
+  let product = 1;
+
+  arr.forEach((subArr) => subArr.forEach((num) => (product *= num)));
+
+  // for (let subArr of arr) {
+  //   for (let num of subArr) {
+  //     product *= num;
+  //   }
+  // }
+  return product;
 };
+
+console.log(twoDimensionalProduct(arr1)); // 360
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-    module.exports = twoDimensionalProduct;
+  module.exports = twoDimensionalProduct;
 } catch (e) {
-    module.exports = null;
+  module.exports = null;
 }
