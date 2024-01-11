@@ -12,8 +12,8 @@ console.log(yeller(['kiwi', 'orange', 'mango'])); // [ 'KIWI!', 'ORANGE!', 'MANG
 
 */
 
-let yeller = function(words) {
-  // Your code here 
+let yeller = function (words) {
+  return words.map((ele) => ele.toUpperCase() + "!");
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -25,8 +25,6 @@ function snakeToCamel(str) {
     .join("");
 }
 
-console.log(snakeToCamel("snakes_go_hiss")); // 'SnakesGoHiss'
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

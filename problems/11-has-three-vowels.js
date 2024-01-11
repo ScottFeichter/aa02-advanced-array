@@ -15,17 +15,25 @@ console.log(hasThreeVowels('dog'));             //  false
 console.log(hasThreeVowels('go home'));         //  false
 
 */
+const vowels = "aeiouAEIOU";
 
-let hasThreeVowels = function(string) {
-    // Your code here 
+let hasThreeVowels = function (string) {
+  let acc = 0;
+  string.split("").forEach((curVal) => {
+    if (vowels.includes(curVal)) {
+      acc++;
+    }
+  });
+
+  return acc >= 3;
 };
 
-// Your code here 
+// Your code here
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-    module.exports = hasThreeVowels;
+  module.exports = hasThreeVowels;
 } catch (e) {
-    module.exports = null;
+  module.exports = null;
 }
