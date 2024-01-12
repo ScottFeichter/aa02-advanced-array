@@ -11,11 +11,10 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 */
 
 let unique = function (array) {
-  let nuDeepArr = JSON.parse(JSON.stringify(array));
+  // let nuDeepArr = JSON.parse(JSON.stringify(array));
   let nuArr = [];
   array.filter((curVal) => {
     if (nuArr.includes(curVal)) {
-      console.log("nothing");
     } else {
       nuArr.push(curVal);
     }
